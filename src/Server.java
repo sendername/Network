@@ -14,7 +14,7 @@ import io.netty.handler.ssl.util.SelfSignedCertificate;
 /**
  * Created by Дима on 05.07.2016.
  */
-public final class EchoServer {
+public final class Server {
 
     static final boolean SSL = System.getProperty("ssl") != null;
     static final int PORT = Integer.parseInt(System.getProperty("port", "8080"));
@@ -45,7 +45,7 @@ public final class EchoServer {
                             if(sslCtx != null) {
                                 p.addLast(sslCtx.newHandler(ch.alloc()));
                             }
-                            p.addLast(new EchoServerHandler());
+                            p.addLast(new ServerHandler());
                         }
                     });
 

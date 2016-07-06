@@ -12,7 +12,7 @@ import io.netty.channel.ChannelInboundHandlerAdapter;
  23   * Handler implementation for the echo server.
  24   */
 @Sharable
-public class EchoServerHandler extends ChannelInboundHandlerAdapter {
+public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
