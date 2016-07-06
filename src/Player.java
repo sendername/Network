@@ -6,4 +6,14 @@ import io.netty.channel.ChannelHandlerContext;
 public class Player {
     int id;
     ChannelHandlerContext ctx;
+
+    public Player(int id, ChannelHandlerContext ctx)
+    {
+        this.id = id;
+        this.ctx = ctx;
+    }
+
+    public void sendMessage(String msg) {
+
+    }
 }
