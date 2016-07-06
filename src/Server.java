@@ -5,11 +5,17 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.Delimiters;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
+
+import java.nio.charset.Charset;
 
 /**
  * Created by Дима on 05.07.2016.
@@ -41,11 +47,14 @@ public final class Server {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         public void initChannel(SocketChannel ch) throws Exception {
-                            ChannelPipeline p = ch.pipeline();
-                            if(sslCtx != null) {
+                            ChannelPipeline pipeline = ch.pipeline();
+                            /*if(sslCtx != null) {
                                 p.addLast(sslCtx.newHandler(ch.alloc()));
-                            }
-                            p.addLast(new ServerHandler());
+                            }*/
+                            pipeline.addLast("framer", new DelimiterBasedFrameDecoder(PORT, Delimiters.lineDelimiter()));
+                            pipeline.addLast("decoder", new StringDecoder(/*Charset.forName("UTF-8")*/));
+                            pipeline.addLast("encoder", new StringEncoder(/*Charset.forName("UTF-8")*/));
+                            pipeline.addLast("handler", new ServerHandler());
                         }
                     });
 
