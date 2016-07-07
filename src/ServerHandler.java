@@ -24,6 +24,8 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.print((String)msg+"\n");
+        String s = (String)msg+"\n";
+        System.out.print(s);
+        ctx.writeAndFlush(s);
     }
 }
