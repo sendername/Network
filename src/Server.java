@@ -7,6 +7,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.Delimiters;
+import io.netty.handler.codec.LengthFieldBasedFrameDecoder;
+import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.codec.bytes.ByteArrayDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
@@ -52,9 +54,11 @@ public final class Server {
                             /*if(sslCtx != null) {
                                 p.addLast(sslCtx.newHandler(ch.alloc()));
                             }*/
-                            pipeline.addLast("framer", new DelimiterBasedFrameDecoder(PORT, Delimiters.lineDelimiter()));
-                            pipeline.addLast("decoder", new StringDecoder(/*Charset.forName("UTF-8")*/));
-                            pipeline.addLast("encoder", new StringEncoder(/*Charset.forName("UTF-8")*/));
+                            //pipeline.addLast("framer", new DelimiterBasedFrameDecoder(PORT, Delimiters.lineDelimiter()));
+                            pipeline.addLast("framer", new LengthFieldBasedFrameDecoder(65535, 0, 2, 0, 2));
+                            pipeline.addLast("prepender", new LengthFieldPrepender(2));
+                            pipeline.addLast("decoder", new StringDecoder());
+                            pipeline.addLast("encoder", new StringEncoder());
                             pipeline.addLast("handler", new ServerHandler());
                         }
                     });

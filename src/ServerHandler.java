@@ -24,22 +24,29 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        String s = (String)msg+"\n";
-        System.out.print(s);
+        String s = (String)msg;
+        System.out.println(s);
 
-        char[] ch = s.toCharArray();
+        /*char[] ch = s.toCharArray();
+        for (char c: ch) {
+            System.out.print((int)c);
+            System.out.print(" ");
+        }
+        System.out.println();*/
+/*
         switch (ch[0]) {
             case 'A':
-
+                System.out.println("A");
                 break;
             case 'B':
-
+                System.out.println("B");
                 break;
             default:
-                ctx.close();
+                //ctx.close();
+                System.out.println("?");
                 break;
         }
-
+*/
         ctx.writeAndFlush(s);
     }
 }
