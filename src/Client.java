@@ -10,6 +10,10 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.DelimiterBasedFrameDecoder;
+import io.netty.handler.codec.Delimiters;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.InsecureTrustManagerFactory;
@@ -24,25 +28,29 @@ public class Client {
     public static void main(String[] args) throws Exception
     {
 
-    EventLoopGroup group = new NioEventLoopGroup();
-    try{
-        Bootstrap b = new Bootstrap();
-        b.group(group)
-                .channel(NioSocketChannel.class)
-                .option(ChannelOption.TCP_NODELAY, true)
-                .handler(new ChannelInitializer<SocketChannel>(){
-                    @Override
-                    public void  initChannel(SocketChannel ch) throws Exception
-                    {
-                        ChannelPipeline p = ch.pipeline();
-                        p.addLast(new ClientHandler());
-                    }
-        });
-        ChannelFuture f = b.connect(HOST, PORT).sync();
-        f.channel().closeFuture().sync();
-    }
-    finally {
-        group.shutdownGracefully();
-    }
+        EventLoopGroup group = new NioEventLoopGroup();
+        try{
+            Bootstrap b = new Bootstrap();
+            b.group(group)
+                    .channel(NioSocketChannel.class)
+                    .option(ChannelOption.TCP_NODELAY, true)
+                    .handler(new ChannelInitializer<SocketChannel>(){
+                        @Override
+                        public void  initChannel(SocketChannel ch) throws Exception
+                        {
+                            ChannelPipeline pipeline = ch.pipeline();
+                            pipeline.addLast("framer", new DelimiterBasedFrameDecoder(2556, Delimiters.lineDelimiter()));
+                            pipeline.addLast("decoder", new StringDecoder());
+                            pipeline.addLast("encoder", new StringEncoder());
+                            pipeline.addLast("handler", new ClientHandler());
+                        }
+            });
+            ChannelFuture f = b.connect(HOST, PORT).sync();
+            //f.channel().closeFuture().sync();
+            f.channel().writeAndFlush("kekeke");
+        }
+        finally {
+            group.shutdownGracefully();
+        }
     }
 }
