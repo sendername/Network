@@ -43,5 +43,6 @@ public class Global {
         hub.addLast(player);
         player.ready = ready;
         // if N players, start game
+        return 0;
     }
 }
