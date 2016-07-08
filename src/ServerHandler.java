@@ -11,6 +11,10 @@ import io.netty.util.concurrent.EventExecutor;
 
 public class ServerHandler extends ChannelInboundHandlerAdapter {
     //private ChannelGroup channel = new DefaultChannelGroup(EventExecutor);
+    public ServerHandler()
+    {
+
+    }
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
@@ -33,6 +37,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
                 break;
             case ClientCommands.PING:
+
+                break;
+            case ClientCommands.READY:
 
                 break;
             default:
