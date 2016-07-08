@@ -15,6 +15,7 @@ public class Global {
     Set<Integer> playersId;
     Map<ChannelHandlerContext, Player> players;
     LinkedList<Player> hub;
+    final int capacityHub = 5;
 
     private Global() {
         playersId = new HashSet<>();
@@ -42,7 +43,8 @@ public class Global {
         if(player.ready == ready) return -1;
         hub.addLast(player);
         player.ready = ready;
-        // if N players, start game
+        if(hub.size() == capacityHub)
+            ;// if N players, start game;
         return 0;
     }
 }

@@ -29,10 +29,10 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
 
         char[] ch = s.toCharArray();
         switch (ch[0]) {
-            case 'A':
+            case ClientCommands.AUTH:
 
                 break;
-            case 'B':
+            case ClientCommands.PING:
 
                 break;
             default:
