@@ -48,6 +48,7 @@ public class Client {
             ChannelFuture f = b.connect(HOST, PORT).sync();
             //f.channel().closeFuture().sync();
             f.channel().writeAndFlush("kekeke");
+            f.channel().close();
         }
         finally {
             group.shutdownGracefully();

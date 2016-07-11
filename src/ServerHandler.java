@@ -12,9 +12,7 @@ import io.netty.util.concurrent.EventExecutor;
 public class ServerHandler extends ChannelInboundHandlerAdapter {
     //private ChannelGroup channel = new DefaultChannelGroup(EventExecutor);
     public ServerHandler()
-    {
-
-    }
+    { }
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
@@ -29,31 +27,22 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         String s = (String)msg;
-        System.out.println(s);
-
-        /*char[] ch = s.toCharArray();
-        for (char c: ch) {
-            System.out.print((int)c);
-            System.out.print(" ");
-        }
-        System.out.println();*/
-/*
-        switch (ch[0]) {
-            case 'A':
-                System.out.println("A");
-                break;
-            case 'B':
-                System.out.println("B");
+//        System.out.println(s);
+        int i = Base64Codec.DecodeFromString(s);
+        System.out.print(i);
+        /*switch (i) {
+            case ClientCommands.AUTH:
+                System.out.println("auth");
                 break;
             case ClientCommands.READY:
-
+                System.out.println("ready");
                 break;
             default:
                 //ctx.close();
                 System.out.println("?");
                 break;
-        }
-*/
-        ctx.writeAndFlush(s);
+        }*/
+
+        //ctx.writeAndFlush(s);
     }
 }

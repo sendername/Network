@@ -25,11 +25,17 @@ import java.nio.charset.Charset;
  */
 public final class Server {
 
+    final Global linkGlobal;
     static final boolean SSL = System.getProperty("ssl") != null;
     static final int PORT = Integer.parseInt(System.getProperty("port", "8080"));
 
-    public static void main(String[] args) throws Exception {
-        // configure SSL
+    public Server(Global linkGlobal)
+    {
+        this.linkGlobal = linkGlobal;
+    }
+
+    public void configure() throws Exception
+    {
         final SslContext sslCtx;
         if(SSL) {
             SelfSignedCertificate ssc = new SelfSignedCertificate();
