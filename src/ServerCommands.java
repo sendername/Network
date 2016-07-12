@@ -1,4 +1,3 @@
-
 public class ServerCommands {
     public static final int STATUS = 0;
     public static final int PING = 1;
