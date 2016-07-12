@@ -20,9 +20,6 @@ import io.netty.handler.ssl.util.SelfSignedCertificate;
 
 import java.nio.charset.Charset;
 
-/**
- * Created by Дима on 05.07.2016.
- */
 public final class Server {
 
     final Global linkGlobal;
@@ -65,7 +62,7 @@ public final class Server {
                             pipeline.addLast("prepender", new LengthFieldPrepender(2));
                             pipeline.addLast("decoder", new StringDecoder());
                             pipeline.addLast("encoder", new StringEncoder());
-                            pipeline.addLast("handler", new ServerHandler());
+                            pipeline.addLast("handler", new ServerHandler(linkGlobal));
                         }
                     });
 

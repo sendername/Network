@@ -3,9 +3,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by UserName on 08.07.2016.
- */
 public class Base64Codec {
     static char[] chArray;
     static Map<Character, Integer> chMap;
@@ -17,7 +14,7 @@ public class Base64Codec {
 
     static public void Init(String s) {
         chArray = s.toCharArray();
-        chMap = new HashMap<Character, Integer>();
+        chMap = new HashMap<>();
         for(int i=0; i<chArray.length; i++){
             chMap.put(chArray[i], i);
         }
@@ -41,15 +38,15 @@ public class Base64Codec {
 
     static public int Decode(char c) {
         if(!initialized) Init();
-        return chMap.containsKey(c) ? chMap.get(c) : 0;
+        return chMap.containsKey(c) ? chMap.get(c) : -1;
     }
 
-    static public int DecodeFromString(String value)
+    static public int DecodeFromString(WrapperString value)
     {
         if(!initialized) Init();
-        char[] charArray = value.toCharArray();
+        char[] charArray = value.s.toCharArray();
         int sum = 0;
-        for(int i = 0; i < value.length(); i ++)
+        for(int i = 0; i < value.s.length(); i++)
         {
             if(charArray[i] != '=')
             {
@@ -58,7 +55,7 @@ public class Base64Codec {
             else
             {
                 //sum = sum * 64 + charArray[i];
-                value = value.substring(i);
+                value.s = value.s.substring(++i);
                 return sum;
             }
         }
