@@ -1,8 +1,7 @@
 package src.interf;
 
-import flash.events.Event;
-import flash.events.MouseEvent;
-import openfl.display.Sprite;
+import flash.events.*;
+import openfl.display.*;
 
 /**
  * ...
@@ -29,7 +28,12 @@ class Panel extends Sprite
 		btn.x = 350;
 		btn.y = 100;
 		addChild(btn);
-		btn = new Button("Экран", function(e:MouseEvent) {});
+		btn = new Button("Экран", function(e:MouseEvent) {
+			if (stage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE)			
+				stage.displayState = StageDisplayState.NORMAL;
+			else
+				stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;				
+		});
 		btn.x = 350;
 		btn.y = 300;
 		addChild(btn);
