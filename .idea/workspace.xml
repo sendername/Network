@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="Сделал полноэкранный режим пока без масштабирования">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" />
+    <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/.build" afterPath="$PROJECT_DIR$/HaxeClient/bin/.build" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" />
     </list>
     <ignored path="Network.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +28,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6268657">
-              <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+            <state vertical-scroll-proportion="-0.19616205">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -328,6 +324,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Network" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -948,7 +958,7 @@
       <workItem from="1468235901717" duration="891000" />
       <workItem from="1468307106040" duration="1610000" />
       <workItem from="1468386975847" duration="4897000" />
-      <workItem from="1468395772068" duration="848000" />
+      <workItem from="1468395772068" duration="1357000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed 2 classes">
       <created>1467800934323</created>
@@ -1028,11 +1038,17 @@
       <option name="project" value="LOCAL" />
       <updated>1468395986097</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Масштабирование наладил">
+      <created>1468400741645</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1468400741645</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34010000" />
+    <option name="totallyTimeSpent" value="34519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1085,7 +1101,8 @@
     <MESSAGE value="Добавил в гит класс панели" />
     <MESSAGE value="В кнопку передается callback" />
     <MESSAGE value="Сделал полноэкранный режим пока без масштабирования" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал полноэкранный режим пока без масштабирования" />
+    <MESSAGE value="Масштабирование наладил" />
+    <option name="LAST_COMMIT_MESSAGE" value="Масштабирование наладил" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1595,8 +1612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6268657">
-          <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+        <state vertical-scroll-proportion="-0.19616205">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
           <folding />
         </state>
       </provider>
