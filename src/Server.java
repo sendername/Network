@@ -15,21 +15,18 @@ import io.netty.handler.logging.LoggingHandler;
 import io.netty.handler.ssl.SslContext;
 import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
+import io.netty.handler.timeout.ReadTimeoutHandler;
 
 import java.nio.charset.Charset;
 
 public final class Server {
 
-    final Global linkGlobal;
     static final boolean SSL = System.getProperty("ssl") != null;
     static final int PORT = Integer.parseInt(System.getProperty("port", "8080"));
 
-    public Server(Global linkGlobal)
-    {
-        this.linkGlobal = linkGlobal;
-    }
 
-    public void configure() throws Exception
+
+    public static void configure() throws Exception
     {
         final SslContext sslCtx;
         if(SSL) {
@@ -60,7 +57,8 @@ public final class Server {
                             pipeline.addLast("prepender", new LengthFieldPrepender(2));
                             pipeline.addLast("decoder", new StringDecoder());
                             pipeline.addLast("encoder", new StringEncoder());
-                            pipeline.addLast("handler", new ServerHandler(linkGlobal));
+                     //       pipeline.addLast("timeouthandler", new ReadTimeoutHandler(5000));
+                            pipeline.addLast("handler", new ServerHandler());
                         }
                     });
 

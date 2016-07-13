@@ -1,3 +1,4 @@
+import com.sun.deploy.trace.Trace;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 
@@ -5,19 +6,19 @@ import java.io.Console;
 import java.util.*;
 
 public class Global {
+    public static Global instance;
 
-    Server server;
     Set<Integer> playersId;
     Map<ChannelHandlerContext, Player> players;
+    Map<Room, Player> rooms;
+
     LinkedList<Player> hub;
     final int capacityHub = 5;
 
     private Global() throws Exception {
-        server = new Server(this);
         playersId = new HashSet<>();
         players = new HashMap<>();
         hub = new LinkedList<>();
-        server.configure();
     }
 
 
@@ -55,6 +56,7 @@ public class Global {
 
     public static void main(String[] args) throws Exception
     {
-        Global global = new Global();
+        instance = new Global();
+        Server.configure();
     }
 }
