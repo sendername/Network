@@ -6,16 +6,11 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
+import io.netty.handler.timeout.ReadTimeoutException;
 import io.netty.util.concurrent.EventExecutor;
 
 
 public class ServerHandler extends ChannelInboundHandlerAdapter {
-    //private ChannelGroup channel = new DefaultChannelGroup(EventExecutor);
-    Global linkGlobal;
-    public ServerHandler(Global linkGlobal)
-    {
-        this.linkGlobal = linkGlobal;
-    }
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
@@ -38,8 +33,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             messageType = Base64Codec.Decode(s.charAt(0));
             s = s.substring(1);
         }
-        //int id = Base64Codec.DecodeFromString(s);
-        System.out.println("Message type : " + messageType + " message : " + s);
+
         switch (messageType) {
 
             case ClientCommands.AUTH:
@@ -51,13 +45,17 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 break;
 
             case ClientCommands.READY:
-                System.out.print("user ready : true");
-                this.linkGlobal.players.get(ctx).ready = true;
+                if(setReadyOn(ctx) < 0) {
+                    ctx.close();
+                    System.out.println("user not defined");
+                }
                 break;
 
             case ClientCommands.CANCEL:
-                System.out.println("user ready = false");
-                this.linkGlobal.players.get(ctx).ready = false;
+                if(setReadyOff(ctx) < 0) {
+                    ctx.close();
+                    System.out.println("user not defined");
+                }
                 break;
 
             default:
@@ -68,11 +66,52 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         }
     }
 
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
+            throws Exception {
+        if (cause instanceof ReadTimeoutException) {
+
+        } else {
+
+        }
+    }
+
+    public int setReadyOn(ChannelHandlerContext ctx)
+    {
+        if(Global.instance.players.containsKey(ctx))
+        {
+            Global.instance.players.get(ctx).ready = true;
+
+            //TRACE:
+            System.out.println("user with id : " +
+                    Global.instance.players.get(ctx).id +
+                    " selected - readyON");
+            //END_TRACE;
+            return 0;
+        }
+        else return -1;
+    }
+    public int setReadyOff(ChannelHandlerContext ctx)
+    {
+        if(Global.instance.players.containsKey(ctx))
+        {
+            Global.instance.players.get(ctx).ready = false;
+
+            //TRACE:
+            System.out.println("user with id : " +
+                    Global.instance.players.get(ctx).id +
+                    " selected - readyOFF");
+            //END_TRACE;
+            return 0;
+        }
+        else return -1;
+    }
+
     public void auth(ChannelHandlerContext ctx, String s)
     {
         WrapperString ws = new WrapperString(s);
         int id = Base64Codec.DecodeFromString(ws);
-        if(this.linkGlobal.connect(id, ctx) == -1) {
+        if(Global.instance.connect(id, ctx) == -1) {
             System.out.print("this id already of server id : " + id);
             ctx.writeAndFlush("yuor id already of list");
             ctx.close();
