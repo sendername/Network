@@ -9,12 +9,18 @@ public class Player {
     int id;
     ChannelHandlerContext ctx;
 
-    public Player(int id, String name, ChannelHandlerContext ctx)
+    public Player(int id, ChannelHandlerContext ctx)
     {
         this.id = id;
         this.ctx = ctx;
         this.ready = false;
         this.name = name;
+    }
+
+    public int sendState()
+    {
+        //Recieved data from DataBase
+        return -1;
     }
 
     public void sendMessage(String msg) {

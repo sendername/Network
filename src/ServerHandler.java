@@ -39,19 +39,11 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             s = s.substring(1);
         }
         //int id = Base64Codec.DecodeFromString(s);
-        System.out.println(messageType);
-
+        System.out.println("Message type : " + messageType + " message : " + s);
         switch (messageType) {
 
             case ClientCommands.AUTH:
-                WrapperString ws = new WrapperString(s);
-                int id = Base64Codec.DecodeFromString(ws);
-                System.out.println(id);
-                System.out.println(ws.s);
-                /*if(this.linkGlobal.connect(new Player(0, "name", null)) == 0)
-                    System.out.println("Accepted");
-                else
-                System.out.println("Server contained this user");*/
+                this.auth(ctx, s);
                 break;
 
             case ClientCommands.PING:
@@ -59,14 +51,35 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 break;
 
             case ClientCommands.READY:
-                System.out.println("ready");
+                System.out.print("user ready : true");
+                this.linkGlobal.players.get(ctx).ready = true;
+                break;
+
+            case ClientCommands.CANCEL:
+                System.out.println("user ready = false");
+                this.linkGlobal.players.get(ctx).ready = false;
                 break;
 
             default:
-                ctx.writeAndFlush("?");
-                ctx.close();
-                System.out.println("server info::default");
+                System.out.println("echo");
+                ctx.writeAndFlush(s);
+                //ctx.close();
                 break;
+        }
+    }
+
+    public void auth(ChannelHandlerContext ctx, String s)
+    {
+        WrapperString ws = new WrapperString(s);
+        int id = Base64Codec.DecodeFromString(ws);
+        if(this.linkGlobal.connect(id, ctx) == -1) {
+            System.out.print("this id already of server id : " + id);
+            ctx.writeAndFlush("yuor id already of list");
+            ctx.close();
+        }
+        else {
+            System.out.println("player connect accepted id : " + id);
+            ctx.writeAndFlush("connect accepted");
         }
     }
 }

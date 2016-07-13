@@ -20,12 +20,19 @@ public class Global {
         server.configure();
     }
 
-    public int connect(Player player)
+
+    public int connect(int id, ChannelHandlerContext ctx)
     {
-        if(playersId.contains(player.id)) return -1;
-        players.put(player.ctx, player);
-        playersId.add(player.id);
-        return 0;
+        if(playersId.contains(id))
+            return -1;
+        else
+        {
+            Player p = new Player(id, ctx);
+            players.put(ctx, p);
+            playersId.add(p.id);
+            p.sendState();
+            return 0;
+        }
     }
 
     public void disconnect(Player player)
