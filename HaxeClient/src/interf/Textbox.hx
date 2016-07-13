@@ -1,15 +1,25 @@
-package interf;
+package src.interf;
+
+import flash.events.*;
+import flash.filters.*;
+import flash.text.*;
+import format.*;
+import openfl.*;
+import openfl.display.*;
 
 /**
  * ...
  * @author 
  */
-class TextBox
+class TextBox extends Sprite
 {
+	var tf:TextFormat;
+	var textfield:TextField;
 
-	public function new() 
+	public function new(s:String) 
 	{
-		// button
+		super();
+		
 		var svg:SVG = new SVG(Assets.getText("img/button2.svg"));
 		var shape:Shape = new Shape();
 		svg.render(shape.graphics);
@@ -27,7 +37,25 @@ class TextBox
 		textfield.embedFonts = true;
 		textfield.y = 25;
 		textfield.autoSize = TextFieldAutoSize.CENTER;
-
+		textfield.type = TextFieldType.INPUT;
+		addChild(textfield);
+	}	
+	
+	function Deactivate(event:Event)
+	{
+		textfield.textColor = 0x889999;
+		
+		var filt = textfield.filters;
+		filt.pop();
+		textfield.filters = filt;
 	}
 	
+	function Activate(event:Event)
+	{		
+		textfield.textColor = 0xFFFFFF;
+		
+		var filt = textfield.filters;
+		filt.push(new GlowFilter(0xFFFF00));
+		textfield.filters = filt;
+	}
 }

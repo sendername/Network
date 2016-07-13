@@ -15,7 +15,7 @@ class Panel extends Sprite
 	{
 		super();
 			
-		var btn:Button;
+		var btn:Sprite;
 		btn = new Button("Вход", function(e:MouseEvent) {});
 		btn.x = 350;
 		btn.y = 200;
@@ -27,6 +27,9 @@ class Panel extends Sprite
 		btn = new Button("Экран", function(e:MouseEvent) {});
 		btn.x = 350;
 		btn.y = 300;
+		addChild(btn);
+		
+		btn = new TextBox("TEST");
 		addChild(btn);
 	}
 	
