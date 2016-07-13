@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HaxeClient/assets/img/button3.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HaxeClient/assets/img/button.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HaxeClient/assets/img/button2.svg" afterPath="" />
+    <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="перерисовал SVG кнопок">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/obj/assets.swf" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/obj/assets.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/GameClient.hxproj" afterPath="$PROJECT_DIR$/HaxeClient/GameClient.hxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/.build" afterPath="$PROJECT_DIR$/HaxeClient/bin/.build" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/DefaultAssetLibrary.hx" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/DefaultAssetLibrary.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/NMEPreloader.hx" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/NMEPreloader.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/debug.hxml" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/debug.hxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/final.hxml" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/final.hxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/release.hxml" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/release.hxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/project.xml" afterPath="$PROJECT_DIR$/HaxeClient/project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Button.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Button.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Textbox.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Textbox.hx" />
     </list>
     <ignored path="Network.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +32,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46908316">
-              <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.5053305">
+              <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -843,7 +830,7 @@
       <workItem from="1468307106040" duration="1610000" />
       <workItem from="1468386975847" duration="4897000" />
       <workItem from="1468395772068" duration="1404000" />
-      <workItem from="1468426319783" duration="104000" />
+      <workItem from="1468426319783" duration="2814000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed 2 classes">
       <created>1467800934323</created>
@@ -935,32 +922,38 @@
       <option name="project" value="LOCAL" />
       <updated>1468401240444</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="перерисовал SVG кнопок">
+      <created>1468426528436</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1468426528436</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34670000" />
+    <option name="totallyTimeSpent" value="37380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793522" sideWeight="0.4975" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793522" sideWeight="0.5025" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32928476" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.183125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.183125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32793522" sideWeight="0.4975" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -994,7 +987,8 @@
     <MESSAGE value="Сделал полноэкранный режим пока без масштабирования" />
     <MESSAGE value="Масштабирование наладил" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="перерисовал SVG кнопок" />
+    <option name="LAST_COMMIT_MESSAGE" value="перерисовал SVG кнопок" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1444,8 +1438,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46908316">
-          <caret line="58" column="57" selection-start-line="58" selection-start-column="57" selection-end-line="58" selection-end-column="57" />
+        <state vertical-scroll-proportion="0.5053305">
+          <caret line="59" column="24" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
           <folding />
         </state>
       </provider>

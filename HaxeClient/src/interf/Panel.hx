@@ -19,18 +19,18 @@ class Panel extends Sprite
 		
 		var btn:Sprite;
 			
-		btn = new TextBox("72");
-		btn.x = 590;
-		btn.y = 200;
+		btn = new TextBox("введите id");
+		btn.x = 500;
+		btn.y = 250;
 		addChild(btn);
 		
 		btn = new Button("Вход", function(e:MouseEvent) {});
-		btn.x = 350;
-		btn.y = 200;
+		btn.x = 200;
+		btn.y = 250;
 		addChild(btn);
 		btn = new Button("Играть", function(e:MouseEvent) {});
 		btn.x = 350;
-		btn.y = 100;
+		btn.y = 150;
 		addChild(btn);
 		btn = new Button("Экран", function(e:MouseEvent) {
 			if (stage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE)			
@@ -39,7 +39,7 @@ class Panel extends Sprite
 				stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;				
 		});
 		btn.x = 350;
-		btn.y = 300;
+		btn.y = 350;
 		addChild(btn);
 	}
 	
