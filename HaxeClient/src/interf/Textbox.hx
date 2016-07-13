@@ -27,6 +27,7 @@ class TextBox
 		textfield.embedFonts = true;
 		textfield.y = 25;
 		textfield.autoSize = TextFieldAutoSize.CENTER;
+
 	}
 	
 }
