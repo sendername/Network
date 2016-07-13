@@ -13,6 +13,9 @@ import openfl.display.*;
  */
 class Button extends Sprite
 {
+	var shape:Shape;
+	var shapePressed:Shape;
+	
 	var tf:TextFormat;
 	var textfield:TextField;
 	
@@ -21,9 +24,14 @@ class Button extends Sprite
 		super();
 		
 		// button
-		var svg:SVG = new SVG(Assets.getText("img/button2.svg"));
-		var shape:Shape = new Shape();
+		var svg:SVG;
+		svg = new SVG(Assets.getText("img/button3.svg"));
+		shape = new Shape();
 		svg.render(shape.graphics);
+		/*svg = new SVG(Assets.getText("img/button4.svg"));
+		shapePressed = new Shape();
+		svg.render(shapePressed.graphics);*/
+		
 		addChild(shape);
 		
 		// text
@@ -53,6 +61,10 @@ class Button extends Sprite
 		var filt = textfield.filters;
 		filt.pop();
 		textfield.filters = filt;
+		/*
+		addChildAt(shape, 0);
+		removeChild(shapePressed);
+		*/
 	}
 	
 	function MouseOver(event:MouseEvent)
@@ -62,5 +74,9 @@ class Button extends Sprite
 		var filt = textfield.filters;
 		filt.push(new GlowFilter(0xFFFF00));
 		textfield.filters = filt;
+		/*
+		addChildAt(shapePressed, 0);
+		removeChild(shape);
+		*/
 	}
 }

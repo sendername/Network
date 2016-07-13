@@ -20,7 +20,7 @@ class TextBox extends Sprite
 	{
 		super();
 		
-		var svg:SVG = new SVG(Assets.getText("img/button2.svg"));
+		var svg:SVG = new SVG(Assets.getText("img/button3.svg"));
 		var shape:Shape = new Shape();
 		svg.render(shape.graphics);
 		addChild(shape);

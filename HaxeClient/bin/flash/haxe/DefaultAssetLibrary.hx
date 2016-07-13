@@ -52,17 +52,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (openfl && !flash)
 		
 		
-		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__font_jura_medium_ttf);
 		
 		#end
 		
 		#if flash
 		
-		className.set ("img/button.svg", __ASSET__img_button_svg);
-		type.set ("img/button.svg", AssetType.TEXT);
-		className.set ("img/button2.svg", __ASSET__img_button2_svg);
-		type.set ("img/button2.svg", AssetType.TEXT);
+		className.set ("img/button3.svg", __ASSET__img_button3_svg);
+		type.set ("img/button3.svg", AssetType.TEXT);
 		className.set ("font/Jura-Medium.ttf", __ASSET__font_jura_medium_ttf);
 		type.set ("font/Jura-Medium.ttf", AssetType.FONT);
 		
@@ -70,11 +67,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#elseif html5
 		
 		var id;
-		id = "img/button.svg";
-		path.set (id, id);
-		
-		type.set (id, AssetType.TEXT);
-		id = "img/button2.svg";
+		id = "img/button3.svg";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -100,11 +93,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		var useManifest = false;
 		
-		className.set ("img/button.svg", __ASSET__img_button_svg);
-		type.set ("img/button.svg", AssetType.TEXT);
-		
-		className.set ("img/button2.svg", __ASSET__img_button2_svg);
-		type.set ("img/button2.svg", AssetType.TEXT);
+		className.set ("img/button3.svg", __ASSET__img_button3_svg);
+		type.set ("img/button3.svg", AssetType.TEXT);
 		
 		className.set ("font/Jura-Medium.ttf", __ASSET__font_jura_medium_ttf);
 		type.set ("font/Jura-Medium.ttf", AssetType.FONT);
@@ -753,13 +743,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if !display
 #if flash
 
-@:keep @:bind #if display private #end class __ASSET__img_button_svg extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__img_button2_svg extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__img_button3_svg extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__font_jura_medium_ttf extends flash.text.Font { }
 
 
 #elseif html5
-
 
 
 @:keep #if display private #end class __ASSET__font_jura_medium_ttf extends lime.text.Font { public function new () { super (); name = "Jura Medium"; } } 
@@ -772,8 +760,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if (windows || mac || linux || cpp)
 
 
-@:file("assets/img/button.svg") #if display private #end class __ASSET__img_button_svg extends lime.utils.Bytes {}
-@:file("assets/img/button2.svg") #if display private #end class __ASSET__img_button2_svg extends lime.utils.Bytes {}
+@:file("assets/img/button3.svg") #if display private #end class __ASSET__img_button3_svg extends lime.utils.Bytes {}
 @:font("assets/font/Jura-Medium.ttf") #if display private #end class __ASSET__font_jura_medium_ttf extends lime.text.Font {}
 
 

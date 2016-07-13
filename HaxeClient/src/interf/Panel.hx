@@ -19,7 +19,7 @@ class Panel extends Sprite
 		
 		var btn:Sprite;
 			
-		btn = new TextBox("TEST");
+		btn = new TextBox("72");
 		btn.x = 590;
 		btn.y = 200;
 		addChild(btn);
