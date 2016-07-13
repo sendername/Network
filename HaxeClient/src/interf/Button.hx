@@ -63,10 +63,4 @@ class Button extends Sprite
 		filt.push(new GlowFilter(0xFFFF00));
 		textfield.filters = filt;
 	}
-	
-	function MouseClick(event:MouseEvent)
-	{
-		
-	}
-	
 }
