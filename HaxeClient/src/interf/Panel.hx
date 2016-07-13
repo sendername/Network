@@ -1,5 +1,7 @@
 package src.interf;
 
+import flash.events.Event;
+import flash.events.MouseEvent;
 import openfl.display.Sprite;
 
 /**
@@ -14,15 +16,15 @@ class Panel extends Sprite
 		super();
 			
 		var btn:Button;
-		btn = new Button("Вход");
+		btn = new Button("Вход", function(e:MouseEvent) {});
 		btn.x = 350;
 		btn.y = 200;
 		addChild(btn);
-		btn = new Button("Играть");
+		btn = new Button("Играть", function(e:MouseEvent) {});
 		btn.x = 350;
 		btn.y = 100;
 		addChild(btn);
-		btn = new Button("Экран");
+		btn = new Button("Экран", function(e:MouseEvent) {});
 		btn.x = 350;
 		btn.y = 300;
 		addChild(btn);

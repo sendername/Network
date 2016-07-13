@@ -16,7 +16,7 @@ class Button extends Sprite
 	var tf:TextFormat;
 	var textfield:TextField;
 	
-	public function new(s:String) 
+	public function new(s:String, func:MouseEvent->Void) 
 	{
 		super();
 		
@@ -43,7 +43,7 @@ class Button extends Sprite
 		addChild(textfield);		
 		addEventListener(MouseEvent.MOUSE_OVER, MouseOver);
 		addEventListener(MouseEvent.MOUSE_OUT, MouseOut);
-		addEventListener(MouseEvent.CLICK, MouseClick);		
+		addEventListener(MouseEvent.CLICK, func);		
 	}
 	
 	function MouseOut(event:MouseEvent)
