@@ -19,15 +19,15 @@ class Main extends Sprite
 		super();		
 				
 		var btn:Button;
-		btn = new Button("Test");
+		btn = new Button("Вход");
 		btn.x = 350;
 		btn.y = 200;
 		addChild(btn);
-		btn = new Button("Test");
+		btn = new Button("Играть");
 		btn.x = 350;
 		btn.y = 100;
 		addChild(btn);
-		btn = new Button("Test");
+		btn = new Button("Экран");
 		btn.x = 350;
 		btn.y = 300;
 		addChild(btn);
