@@ -25,6 +25,10 @@ ApplicationMain.create = function() {
 	var types = [];
 	urls.push("img/button.svg");
 	types.push("TEXT");
+	urls.push("img/button2.svg");
+	types.push("TEXT");
+	urls.push("Jura Medium");
+	types.push("FONT");
 	if(ApplicationMain.config.assetsPrefix != null) {
 		var _g1 = 0;
 		var _g = urls.length;
@@ -47,7 +51,7 @@ ApplicationMain.init = function() {
 	if(total == 0) ApplicationMain.start();
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "38", company : "", file : "GameClient", fps : 60, name : "GameClient", orientation : "", packageName : "GameClient", version : "1.0.0", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 480, parameters : "{}", resizable : true, stencilBuffer : true, title : "GameClient", vsync : false, width : 800, x : null, y : null}]};
+	ApplicationMain.config = { build : "143", company : "", file : "GameClient", fps : 60, name : "GameClient", orientation : "", packageName : "GameClient", version : "1.0.0", windows : [{ antialiasing : 0, background : 12312046, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 600, parameters : "{}", resizable : true, stencilBuffer : true, title : "GameClient", vsync : false, width : 1000, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -1360,6 +1364,8 @@ openfl_display_Sprite.prototype = $extend(openfl_display_DisplayObjectContainer.
 });
 var Main = function() {
 	openfl_display_Sprite.call(this);
+	var pan = new src_interf_Panel();
+	this.addChild(pan);
 };
 $hxClasses["Main"] = Main;
 Main.__name__ = ["Main"];
@@ -1458,10 +1464,17 @@ var DefaultAssetLibrary = function() {
 	this.path = new haxe_ds_StringMap();
 	this.className = new haxe_ds_StringMap();
 	lime_AssetLibrary.call(this);
+	openfl_text_Font.registerFont(_$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf);
 	var id;
 	id = "img/button.svg";
 	this.path.set(id,id);
 	this.type.set(id,"TEXT");
+	id = "img/button2.svg";
+	this.path.set(id,id);
+	this.type.set(id,"TEXT");
+	id = "font/Jura-Medium.ttf";
+	this.className.set(id,_$_$ASSET_$_$font_$jura_$medium_$ttf);
+	this.type.set(id,"FONT");
 	var assetsPrefix = null;
 	if(ApplicationMain.config != null && Object.prototype.hasOwnProperty.call(ApplicationMain.config,"assetsPrefix")) assetsPrefix = ApplicationMain.config.assetsPrefix;
 	if(assetsPrefix != null) {
@@ -1582,6 +1595,137 @@ DefaultAssetLibrary.prototype = $extend(lime_AssetLibrary.prototype,{
 		return promise.future;
 	}
 	,__class__: DefaultAssetLibrary
+});
+var lime_text_Font = function(name) {
+	if(name != null) this.name = name;
+	if(this.__fontPath != null) this.__fromFile(this.__fontPath);
+};
+$hxClasses["lime.text.Font"] = lime_text_Font;
+lime_text_Font.__name__ = ["lime","text","Font"];
+lime_text_Font.fromBytes = function(bytes) {
+	var font = new lime_text_Font();
+	font.__fromBytes(bytes);
+	return font;
+};
+lime_text_Font.fromFile = function(path) {
+	var font = new lime_text_Font();
+	font.__fromFile(path);
+	return font;
+};
+lime_text_Font.prototype = {
+	decompose: function() {
+		return null;
+	}
+	,getGlyph: function(character) {
+		return -1;
+	}
+	,getGlyphs: function(characters) {
+		if(characters == null) characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^`'\"/\\&*()[]{}<>|:;_-+=?,. ";
+		return null;
+	}
+	,getGlyphMetrics: function(glyph) {
+		return null;
+	}
+	,renderGlyph: function(glyph,fontSize) {
+		return null;
+	}
+	,renderGlyphs: function(glyphs,fontSize) {
+		return null;
+	}
+	,__fromBytes: function(bytes) {
+		this.__fontPath = null;
+	}
+	,__fromFile: function(path) {
+		this.__fontPath = path;
+	}
+	,__setSize: function(size) {
+	}
+	,get_ascender: function() {
+		return 0;
+	}
+	,get_descender: function() {
+		return 0;
+	}
+	,get_height: function() {
+		return 0;
+	}
+	,get_numGlyphs: function() {
+		return 0;
+	}
+	,get_underlinePosition: function() {
+		return 0;
+	}
+	,get_underlineThickness: function() {
+		return 0;
+	}
+	,get_unitsPerEM: function() {
+		return 0;
+	}
+	,__class__: lime_text_Font
+	,__properties__: {get_unitsPerEM:"get_unitsPerEM",get_underlineThickness:"get_underlineThickness",get_underlinePosition:"get_underlinePosition",get_numGlyphs:"get_numGlyphs",get_height:"get_height",get_descender:"get_descender",get_ascender:"get_ascender"}
+};
+var _$_$ASSET_$_$font_$jura_$medium_$ttf = function() {
+	lime_text_Font.call(this);
+	this.name = "Jura Medium";
+};
+$hxClasses["__ASSET__font_jura_medium_ttf"] = _$_$ASSET_$_$font_$jura_$medium_$ttf;
+_$_$ASSET_$_$font_$jura_$medium_$ttf.__name__ = ["__ASSET__font_jura_medium_ttf"];
+_$_$ASSET_$_$font_$jura_$medium_$ttf.__super__ = lime_text_Font;
+_$_$ASSET_$_$font_$jura_$medium_$ttf.prototype = $extend(lime_text_Font.prototype,{
+	__class__: _$_$ASSET_$_$font_$jura_$medium_$ttf
+});
+var openfl_text_Font = function(name) {
+	lime_text_Font.call(this,name);
+};
+$hxClasses["openfl.text.Font"] = openfl_text_Font;
+openfl_text_Font.__name__ = ["openfl","text","Font"];
+openfl_text_Font.enumerateFonts = function(enumerateDeviceFonts) {
+	if(enumerateDeviceFonts == null) enumerateDeviceFonts = false;
+	return openfl_text_Font.__registeredFonts;
+};
+openfl_text_Font.fromBytes = function(bytes) {
+	var font = new openfl_text_Font();
+	font.__fromBytes(openfl_utils__$ByteArray_ByteArray_$Impl_$.toBytes(bytes));
+	return font;
+};
+openfl_text_Font.fromFile = function(path) {
+	var font = new openfl_text_Font();
+	font.__fromFile(path);
+	return font;
+};
+openfl_text_Font.registerFont = function(font) {
+	var instance;
+	instance = js_Boot.__cast(Type.createInstance(font,[]) , openfl_text_Font);
+	if(instance != null) openfl_text_Font.__registeredFonts.push(instance);
+};
+openfl_text_Font.__fromLimeFont = function(value) {
+	var font = new openfl_text_Font();
+	font.name = value.name;
+	font.src = value.src;
+	return font;
+};
+openfl_text_Font.__super__ = lime_text_Font;
+openfl_text_Font.prototype = $extend(lime_text_Font.prototype,{
+	get_fontName: function() {
+		return this.name;
+	}
+	,set_fontName: function(value) {
+		return this.name = value;
+	}
+	,__class__: openfl_text_Font
+	,__properties__: $extend(lime_text_Font.prototype.__properties__,{set_fontName:"set_fontName",get_fontName:"get_fontName"})
+});
+var _$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf = function() {
+	var font = new _$_$ASSET_$_$font_$jura_$medium_$ttf();
+	this.src = font.src;
+	this.name = font.name;
+	openfl_text_Font.call(this);
+};
+$hxClasses["__ASSET__OPENFL__font_jura_medium_ttf"] = _$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf;
+_$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf.__name__ = ["__ASSET__OPENFL__font_jura_medium_ttf"];
+_$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf.__super__ = openfl_text_Font;
+_$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf.prototype = $extend(openfl_text_Font.prototype,{
+	__class__: _$_$ASSET_$_$OPENFL_$_$font_$jura_$medium_$ttf
 });
 var EReg = function(r,opt) {
 	opt = opt.split("u").join("");
@@ -1706,14 +1850,14 @@ NMEPreloader.__name__ = ["NMEPreloader"];
 NMEPreloader.__super__ = openfl_display_Sprite;
 NMEPreloader.prototype = $extend(openfl_display_Sprite.prototype,{
 	getBackgroundColor: function() {
-		return 0;
+		return 12312046;
 	}
 	,getHeight: function() {
-		var height = 480;
+		var height = 600;
 		if(height > 0) return height; else return openfl_Lib.current.stage.stageHeight;
 	}
 	,getWidth: function() {
-		var width = 800;
+		var width = 1000;
 		if(width > 0) return width; else return openfl_Lib.current.stage.stageWidth;
 	}
 	,onInit: function() {
@@ -16165,74 +16309,6 @@ $hxClasses["lime.system._ThreadPool.ThreadPoolMessage"] = lime_system__$ThreadPo
 lime_system__$ThreadPool_ThreadPoolMessage.__name__ = ["lime","system","_ThreadPool","ThreadPoolMessage"];
 lime_system__$ThreadPool_ThreadPoolMessage.prototype = {
 	__class__: lime_system__$ThreadPool_ThreadPoolMessage
-};
-var lime_text_Font = function(name) {
-	if(name != null) this.name = name;
-	if(this.__fontPath != null) this.__fromFile(this.__fontPath);
-};
-$hxClasses["lime.text.Font"] = lime_text_Font;
-lime_text_Font.__name__ = ["lime","text","Font"];
-lime_text_Font.fromBytes = function(bytes) {
-	var font = new lime_text_Font();
-	font.__fromBytes(bytes);
-	return font;
-};
-lime_text_Font.fromFile = function(path) {
-	var font = new lime_text_Font();
-	font.__fromFile(path);
-	return font;
-};
-lime_text_Font.prototype = {
-	decompose: function() {
-		return null;
-	}
-	,getGlyph: function(character) {
-		return -1;
-	}
-	,getGlyphs: function(characters) {
-		if(characters == null) characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^`'\"/\\&*()[]{}<>|:;_-+=?,. ";
-		return null;
-	}
-	,getGlyphMetrics: function(glyph) {
-		return null;
-	}
-	,renderGlyph: function(glyph,fontSize) {
-		return null;
-	}
-	,renderGlyphs: function(glyphs,fontSize) {
-		return null;
-	}
-	,__fromBytes: function(bytes) {
-		this.__fontPath = null;
-	}
-	,__fromFile: function(path) {
-		this.__fontPath = path;
-	}
-	,__setSize: function(size) {
-	}
-	,get_ascender: function() {
-		return 0;
-	}
-	,get_descender: function() {
-		return 0;
-	}
-	,get_height: function() {
-		return 0;
-	}
-	,get_numGlyphs: function() {
-		return 0;
-	}
-	,get_underlinePosition: function() {
-		return 0;
-	}
-	,get_underlineThickness: function() {
-		return 0;
-	}
-	,get_unitsPerEM: function() {
-		return 0;
-	}
-	,__class__: lime_text_Font
-	,__properties__: {get_unitsPerEM:"get_unitsPerEM",get_underlineThickness:"get_underlineThickness",get_underlinePosition:"get_underlinePosition",get_numGlyphs:"get_numGlyphs",get_height:"get_height",get_descender:"get_descender",get_ascender:"get_ascender"}
 };
 var lime_text__$Glyph_Glyph_$Impl_$ = {};
 $hxClasses["lime.text._Glyph.Glyph_Impl_"] = lime_text__$Glyph_Glyph_$Impl_$;
@@ -35680,47 +35756,6 @@ openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.toString = function(value) {
 		return null;
 	}
 };
-var openfl_text_Font = function(name) {
-	lime_text_Font.call(this,name);
-};
-$hxClasses["openfl.text.Font"] = openfl_text_Font;
-openfl_text_Font.__name__ = ["openfl","text","Font"];
-openfl_text_Font.enumerateFonts = function(enumerateDeviceFonts) {
-	if(enumerateDeviceFonts == null) enumerateDeviceFonts = false;
-	return openfl_text_Font.__registeredFonts;
-};
-openfl_text_Font.fromBytes = function(bytes) {
-	var font = new openfl_text_Font();
-	font.__fromBytes(openfl_utils__$ByteArray_ByteArray_$Impl_$.toBytes(bytes));
-	return font;
-};
-openfl_text_Font.fromFile = function(path) {
-	var font = new openfl_text_Font();
-	font.__fromFile(path);
-	return font;
-};
-openfl_text_Font.registerFont = function(font) {
-	var instance;
-	instance = js_Boot.__cast(Type.createInstance(font,[]) , openfl_text_Font);
-	if(instance != null) openfl_text_Font.__registeredFonts.push(instance);
-};
-openfl_text_Font.__fromLimeFont = function(value) {
-	var font = new openfl_text_Font();
-	font.name = value.name;
-	font.src = value.src;
-	return font;
-};
-openfl_text_Font.__super__ = lime_text_Font;
-openfl_text_Font.prototype = $extend(lime_text_Font.prototype,{
-	get_fontName: function() {
-		return this.name;
-	}
-	,set_fontName: function(value) {
-		return this.name = value;
-	}
-	,__class__: openfl_text_Font
-	,__properties__: $extend(lime_text_Font.prototype.__properties__,{set_fontName:"set_fontName",get_fontName:"get_fontName"})
-});
 var openfl_text__$FontStyle_FontStyle_$Impl_$ = {};
 $hxClasses["openfl.text._FontStyle.FontStyle_Impl_"] = openfl_text__$FontStyle_FontStyle_$Impl_$;
 openfl_text__$FontStyle_FontStyle_$Impl_$.__name__ = ["openfl","text","_FontStyle","FontStyle_Impl_"];
@@ -37938,40 +37973,69 @@ haxe_lang_Iterable.__name__ = ["haxe","lang","Iterable"];
 haxe_lang_Iterable.prototype = {
 	__class__: haxe_lang_Iterable
 };
-var src_interf_Button = function() {
-	this.textfield = new openfl_text_TextField();
-	this.tf = new openfl_text_TextFormat(openfl_Assets.getFont("font/Jura-Medium.ttf").get_fontName(),42,16777215);
+var src_interf_Button = function(s) {
 	openfl_display_Sprite.call(this);
-	this.tf.align = 0;
-	this.textfield.set_width(300);
-	this.textfield.set_height(100);
-	this.tf.align = 0;
-	this.textfield.set_defaultTextFormat(this.tf);
-	this.textfield.set_text("Игра с друзьями");
-	this.textfield.set_embedFonts(true);
-	this.textfield.set_y(25);
-	this.textfield.set_autoSize(0);
-	var filt = this.textfield.get_filters();
-	filt.push(new openfl_filters_GlowFilter(65280));
-	this.textfield.set_filters(filt);
-	this.textfield.set_selectable(false);
-	this.stage.addChild(this.textfield);
-	var svg = new format_SVG(openfl_Assets.getText("img/button.svg"));
+	var svg = new format_SVG(openfl_Assets.getText("img/button2.svg"));
 	var shape = new openfl_display_Shape();
 	svg.render(shape.get_graphics());
 	this.addChild(shape);
-	shape.addEventListener("mouseOver",$bind(this,this.MouseInShape));
-	shape.addEventListener("click",$bind(this,this.MouseClick));
+	this.tf = new openfl_text_TextFormat(openfl_Assets.getFont("font/Jura-Medium.ttf").get_fontName(),42,8952217);
+	this.tf.align = 0;
+	this.textfield = new openfl_text_TextField();
+	this.textfield.set_width(300);
+	this.textfield.set_height(100);
+	this.textfield.set_defaultTextFormat(this.tf);
+	this.textfield.set_selectable(false);
+	this.textfield.set_text(s);
+	this.textfield.set_embedFonts(true);
+	this.textfield.set_y(25);
+	this.textfield.set_autoSize(0);
+	this.addChild(this.textfield);
+	this.addEventListener("mouseOver",$bind(this,this.MouseOver));
+	this.addEventListener("mouseOut",$bind(this,this.MouseOut));
+	this.addEventListener("click",$bind(this,this.MouseClick));
 };
 $hxClasses["src.interf.Button"] = src_interf_Button;
 src_interf_Button.__name__ = ["src","interf","Button"];
 src_interf_Button.__super__ = openfl_display_Sprite;
 src_interf_Button.prototype = $extend(openfl_display_Sprite.prototype,{
-	MouseInShape: function(event) {
+	MouseOut: function(event) {
+		this.textfield.set_textColor(8952217);
+		var filt = this.textfield.get_filters();
+		filt.pop();
+		this.textfield.set_filters(filt);
+	}
+	,MouseOver: function(event) {
+		this.textfield.set_textColor(16777215);
+		var filt = this.textfield.get_filters();
+		filt.push(new openfl_filters_GlowFilter(16776960));
+		this.textfield.set_filters(filt);
 	}
 	,MouseClick: function(event) {
 	}
 	,__class__: src_interf_Button
+});
+var src_interf_Panel = function() {
+	openfl_display_Sprite.call(this);
+	var btn;
+	btn = new src_interf_Button("Вход");
+	btn.set_x(350);
+	btn.set_y(200);
+	this.addChild(btn);
+	btn = new src_interf_Button("Играть");
+	btn.set_x(350);
+	btn.set_y(100);
+	this.addChild(btn);
+	btn = new src_interf_Button("Экран");
+	btn.set_x(350);
+	btn.set_y(300);
+	this.addChild(btn);
+};
+$hxClasses["src.interf.Panel"] = src_interf_Panel;
+src_interf_Panel.__name__ = ["src","interf","Panel"];
+src_interf_Panel.__super__ = openfl_display_Sprite;
+src_interf_Panel.prototype = $extend(openfl_display_Sprite.prototype,{
+	__class__: src_interf_Panel
 });
 var $_, $fid = 0;
 function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id__ = $fid++; var f; if( o.hx__closures__ == null ) o.hx__closures__ = {}; else f = o.hx__closures__[m.__id__]; if( f == null ) { f = function(){ return f.method.apply(f.scope, arguments); }; f.scope = o; f.method = m; o.hx__closures__[m.__id__] = f; } return f; }
@@ -38028,6 +38092,7 @@ openfl_display_DisplayObject.__instanceCount = 0;
 openfl_display_DisplayObject.__worldRenderDirty = 0;
 openfl_display_DisplayObject.__worldTransformDirty = 0;
 openfl_display_DisplayObject.__cacheAsBitmapMode = false;
+openfl_text_Font.__registeredFonts = [];
 Xml.Element = 0;
 Xml.PCData = 1;
 Xml.CData = 2;
@@ -39223,7 +39288,6 @@ openfl_net__$URLRequestMethod_URLRequestMethod_$Impl_$.PUT = 5;
 openfl_system_SecurityDomain.currentDomain = new openfl_system_SecurityDomain();
 openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.ADVANCED = 0;
 openfl_text__$AntiAliasType_AntiAliasType_$Impl_$.NORMAL = 1;
-openfl_text_Font.__registeredFonts = [];
 openfl_text__$FontStyle_FontStyle_$Impl_$.BOLD = 0;
 openfl_text__$FontStyle_FontStyle_$Impl_$.BOLD_ITALIC = 1;
 openfl_text__$FontStyle_FontStyle_$Impl_$.ITALIC = 2;

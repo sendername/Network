@@ -34,6 +34,14 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("img/button2.svg");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("Jura Medium");
+		types.push (lime.Assets.AssetType.FONT);
+		
+		
 		
 		if (config.assetsPrefix != null) {
 			
@@ -95,7 +103,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "38",
+			build: "143",
 			company: "",
 			file: "GameClient",
 			fps: 60,
@@ -107,19 +115,19 @@ class ApplicationMain {
 				
 				{
 					antialiasing: 0,
-					background: 0,
+					background: 12312046,
 					borderless: false,
 					depthBuffer: false,
 					display: 0,
 					fullscreen: false,
 					hardware: false,
-					height: 480,
+					height: 600,
 					parameters: "{}",
 					resizable: true,
 					stencilBuffer: true,
 					title: "GameClient",
 					vsync: false,
-					width: 800,
+					width: 1000,
 					x: null,
 					y: null
 				},
@@ -137,7 +145,7 @@ class ApplicationMain {
 		
 		#if (js && html5)
 		#if (munit || utest)
-		openfl.Lib.embed (null, 800, 480, "000000");
+		openfl.Lib.embed (null, 1000, 600, "BBDDEE");
 		#end
 		#else
 		create ();

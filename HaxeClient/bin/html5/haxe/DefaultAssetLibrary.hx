@@ -53,12 +53,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__font_jura_medium_ttf);
+		
 		#end
 		
 		#if flash
 		
 		className.set ("img/button.svg", __ASSET__img_button_svg);
 		type.set ("img/button.svg", AssetType.TEXT);
+		className.set ("img/button2.svg", __ASSET__img_button2_svg);
+		type.set ("img/button2.svg", AssetType.TEXT);
+		className.set ("font/Jura-Medium.ttf", __ASSET__font_jura_medium_ttf);
+		type.set ("font/Jura-Medium.ttf", AssetType.FONT);
 		
 		
 		#elseif html5
@@ -68,6 +74,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "img/button2.svg";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "font/Jura-Medium.ttf";
+		className.set (id, __ASSET__font_jura_medium_ttf);
+		
+		type.set (id, AssetType.FONT);
 		
 		
 		var assetsPrefix = null;
@@ -88,6 +102,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("img/button.svg", __ASSET__img_button_svg);
 		type.set ("img/button.svg", AssetType.TEXT);
+		
+		className.set ("img/button2.svg", __ASSET__img_button2_svg);
+		type.set ("img/button2.svg", AssetType.TEXT);
+		
+		className.set ("font/Jura-Medium.ttf", __ASSET__font_jura_medium_ttf);
+		type.set ("font/Jura-Medium.ttf", AssetType.FONT);
 		
 		
 		if (useManifest) {
@@ -734,11 +754,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__img_button_svg extends null { }
+@:keep @:bind #if display private #end class __ASSET__img_button2_svg extends null { }
+@:keep @:bind #if display private #end class __ASSET__font_jura_medium_ttf extends null { }
 
 
 #elseif html5
 
 
+
+@:keep #if display private #end class __ASSET__font_jura_medium_ttf extends lime.text.Font { public function new () { super (); name = "Jura Medium"; } } 
 
 
 #else
@@ -749,6 +773,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:file("assets/img/button.svg") #if display private #end class __ASSET__img_button_svg extends lime.utils.Bytes {}
+@:file("assets/img/button2.svg") #if display private #end class __ASSET__img_button2_svg extends lime.utils.Bytes {}
+@:font("assets/font/Jura-Medium.ttf") #if display private #end class __ASSET__font_jura_medium_ttf extends lime.text.Font {}
 
 
 
@@ -756,6 +782,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 #end
 
 #if (openfl && !flash)
+@:keep #if display private #end class __ASSET__OPENFL__font_jura_medium_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__font_jura_medium_ttf (); src = font.src; name = font.name; super (); }}
 
 #end
 
