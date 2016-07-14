@@ -15,6 +15,15 @@ class TextBox extends Sprite
 {
 	var tf:TextFormat;
 	var textfield:TextField;
+	public var text(get, set):String;
+	
+	function get_text() {
+		return textfield.text;
+	}
+	
+	function set_text(s) {
+		return textfield.text = s;
+	}
 
 	public function new(s:String) 
 	{

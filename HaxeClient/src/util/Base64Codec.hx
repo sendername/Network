@@ -1,4 +1,4 @@
-package;
+package util;
 import haxe.ds.HashMap;
 
 /**
@@ -40,5 +40,23 @@ class Base64Codec
 	static public function Decode(c:String):Int
 	{
 		return map[c];
+	}
+	
+	static public function DecodeFromString(value:WrapperString):Int {
+        var sum:Int = 0;
+        for(i in 0...value.s.length)
+        {
+            if(value.s.charAt(i) != '=')
+            {
+                sum = sum * 64 + Decode(value.s.charAt(i));
+            }
+            else
+            {
+                //sum = sum * 64 + charArray[i];
+                value.s = value.s.substring(i+1);
+                return sum;
+            }
+        }
+        return -1;
 	}
 }

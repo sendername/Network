@@ -1,11 +1,12 @@
 package;
 
+import flash.events.*;
 import flash.text.*;
 import format.*;
 import openfl.*;
-import flash.filters.GlowFilter;
 import openfl.display.*;
 import src.interf.*;
+import util.*;
 
 /**
  * ...
@@ -13,13 +14,22 @@ import src.interf.*;
  */
 class Main extends Sprite 
 {
-
-	public function new() 
+	static public var connection:Connection;
+	
+	public function new()
 	{
-		super();		
+		super();
+		Base64Codec.Init();
 			
 		var pan:Panel = new Panel();
 		addChild(pan);
+		pan.visible = false;
+		
+		connection = new Connection("localhost", 8080);
+		connection.socket.addEventListener(Event.CONNECT, function(e:Event) {
+			pan.visible = true;
+		});
+		connection.connect();
 	}
 
 }
