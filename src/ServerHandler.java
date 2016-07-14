@@ -108,9 +108,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         WrapperString ws = new WrapperString(s);
         int id = Base64Codec.DecodeFromString(ws);
 
-        if(Global.instance.connect(id, ctx) == -1) {
+        if(Global.instance.connect(id, ctx) < 0) {
             System.out.print("this id already of server id : " + id);
-            ctx.writeAndFlush("yuor id already of list");
+            ctx.writeAndFlush("your are already logged in");
             ctx.close();
         }
         else {

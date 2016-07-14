@@ -83,13 +83,7 @@ class Connection
 	
 	function onSocketData(e:ProgressEvent)
 	{
-		var s:String = socket.readUTF();
-		trace(s);
-		switch (s.charAt(0)) 
-		{
-			case "0":
-			case "1":
-			default:
-		}
+		/*var s:String = socket.readUTF();
+		trace(s);*/
 	}
 }

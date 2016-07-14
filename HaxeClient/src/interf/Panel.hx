@@ -16,7 +16,7 @@ class Panel extends Sprite
 {
 	var st:Stage;
 	var input:TextBox;
-	var text:TextField;
+	public var text:TextField;
 
 	public function new() 
 	{

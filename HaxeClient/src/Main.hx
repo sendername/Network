@@ -29,6 +29,9 @@ class Main extends Sprite
 		connection.socket.addEventListener(Event.CONNECT, function(e:Event) {
 			pan.visible = true;
 		});
+		connection.socket.addEventListener(ProgressEvent.SOCKET_DATA, function(e:ProgressEvent) {
+			pan.text.text = connection.socket.readUTF();
+		});
 		connection.connect();
 	}
 

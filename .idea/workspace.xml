@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="перерисовал SVG кнопок">
+    <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Global.class" afterPath="$PROJECT_DIR$/target/classes/Global.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Server$1.class" afterPath="$PROJECT_DIR$/target/classes/Server$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Server.class" afterPath="$PROJECT_DIR$/target/classes/Server.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ServerHandler.class" afterPath="$PROJECT_DIR$/target/classes/ServerHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/.build" afterPath="$PROJECT_DIR$/HaxeClient/bin/.build" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/Main.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/Main.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Textbox.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Textbox.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/util/Base64Codec.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/util/Base64Codec.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/util/ClientCommands.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/util/ClientCommands.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/util/Connection.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/util/Connection.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/util/ServerCommands.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/util/ServerCommands.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServerHandler.java" afterPath="$PROJECT_DIR$/src/ServerHandler.java" />
     </list>
     <ignored path="Network.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,21 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Base64Codec.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Base64Codec.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Base64Codec.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77272725">
-              <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientCommands.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ClientCommands.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -73,7 +58,27 @@
         <entry file="file://$PROJECT_DIR$/src/ServerCommands.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextBox.hx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HaxeClient/src/interf/TextBox.hx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ServerHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5409091">
+              <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -83,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/Global.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/HaxeClient/src/Main.hx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -103,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+              <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -123,7 +128,7 @@
         <entry file="file://$PROJECT_DIR$/src/WrapperString.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -145,7 +150,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/Client.java" />
-        <option value="$PROJECT_DIR$/src/ServerHandler.java" />
         <option value="$PROJECT_DIR$/src/ClientHandler.java" />
         <option value="$PROJECT_DIR$/src/Base64Codec.java" />
         <option value="$PROJECT_DIR$/src/ClientCommands.java" />
@@ -153,6 +157,7 @@
         <option value="$PROJECT_DIR$/HaxeClient/src/Main.hx" />
         <option value="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" />
         <option value="$PROJECT_DIR$/src/Server.java" />
+        <option value="$PROJECT_DIR$/src/ServerHandler.java" />
       </list>
     </option>
   </component>
@@ -340,6 +345,117 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Global.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ServerHandler.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Global">
     <configuration default="false" name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -849,7 +965,7 @@
       <workItem from="1468386975847" duration="4897000" />
       <workItem from="1468395772068" duration="1404000" />
       <workItem from="1468426319783" duration="3422000" />
-      <workItem from="1468476858880" duration="2617000" />
+      <workItem from="1468476858880" duration="6371000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed 2 classes">
       <created>1467800934323</created>
@@ -953,11 +1069,17 @@
       <option name="project" value="LOCAL" />
       <updated>1468439290533</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Допилил декодер base64 на клиенте, привязал обработчтки к кнопкам">
+      <created>1468480940695</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1468480940695</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40605000" />
+    <option name="totallyTimeSpent" value="44359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1013,7 +1135,8 @@
     <MESSAGE value="Масштабирование наладил" />
     <MESSAGE value="test" />
     <MESSAGE value="перерисовал SVG кнопок" />
-    <option name="LAST_COMMIT_MESSAGE" value="перерисовал SVG кнопок" />
+    <MESSAGE value="Допилил декодер base64 на клиенте, привязал обработчтки к кнопкам" />
+    <option name="LAST_COMMIT_MESSAGE" value="Допилил декодер base64 на клиенте, привязал обработчтки к кнопкам" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1026,14 +1149,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Base64Codec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientCommands.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1340,13 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientCommands.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1355,26 +1463,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ServerCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Global.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HaxeClient/src/Main.hx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1390,7 +1482,7 @@
     <entry file="file://$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="4" />
+          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1399,6 +1491,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.196388">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Base64Codec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Global.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1414,15 +1522,31 @@
     <entry file="file://$PROJECT_DIR$/src/WrapperString.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Base64Codec.java">
+    <entry file="file://$PROJECT_DIR$/src/ServerCommands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77272725">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HaxeClient/src/interf/TextBox.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5409091">
+          <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
           <folding />
         </state>
       </provider>
