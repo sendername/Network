@@ -4,6 +4,7 @@ import io.netty.channel.ChannelHandlerContext;
 
 import java.io.Console;
 import java.util.*;
+import java.lang.*;
 
 public class Global {
     public static Global instance;
@@ -13,7 +14,7 @@ public class Global {
     Map<Room, Player> rooms;
 
     LinkedList<Player> hub;
-    final int capacityHub = 5;
+    final int capacityHub = 3;
 
     private Global() throws Exception {
         playersId = new HashSet<>();
@@ -31,7 +32,7 @@ public class Global {
             Player p = new Player(id, ctx);
             players.put(ctx, p);
             playersId.add(p.id);
-            p.sendState();
+            incToHub(p);
             return 0;
         }
     }
@@ -44,14 +45,18 @@ public class Global {
         player.ctx.close();
     }
 
-    public int setReady(Player player, boolean ready)
+    public int incToHub(Player player)
     {
-        if(player.ready == ready) return -1;
-        hub.addLast(player);
-        player.ready = ready;
-        if(hub.size() == capacityHub)
-            ;// if N players, start game;
-        return 0;
+        hub.add(player);
+        if(hub.size() == capacityHub) {
+            for (Player p : hub) {
+                p.sendMessage("battle ground active + your id : " + p.id);
+                rooms.put(new Room(), p);
+            }
+            hub.clear();
+            return 0;
+        }
+        return -1;
     }
 
     public static void main(String[] args) throws Exception
