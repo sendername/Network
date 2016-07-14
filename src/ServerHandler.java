@@ -41,20 +41,20 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
                 break;
 
             case ClientCommands.PING:
-                System.out.println("ping");
+                if(Global.instance.players.containsKey(ctx) == false) {
+                    userNotDefined(ctx);
+                }
                 break;
 
             case ClientCommands.READY:
                 if(setReadyOn(ctx) < 0) {
-                    ctx.close();
-                    System.out.println("user not defined");
+                    userNotDefined(ctx);
                 }
                 break;
 
             case ClientCommands.CANCEL:
                 if(setReadyOff(ctx) < 0) {
-                    ctx.close();
-                    System.out.println("user not defined");
+                    userNotDefined(ctx);
                 }
                 break;
 
@@ -83,9 +83,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             Global.instance.players.get(ctx).ready = true;
 
             //TRACE:
-            System.out.println("user with id : " +
+           /* System.out.println("user with id : " +
                     Global.instance.players.get(ctx).id +
-                    " selected - readyON");
+                    " selected - readyON");*/
             //END_TRACE;
             return 0;
         }
@@ -98,9 +98,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             Global.instance.players.get(ctx).ready = false;
 
             //TRACE:
-            System.out.println("user with id : " +
+            /*System.out.println("user with id : " +
                     Global.instance.players.get(ctx).id +
-                    " selected - readyOFF");
+                    " selected - readyOFF");*/
             //END_TRACE;
             return 0;
         }
@@ -111,6 +111,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     {
         WrapperString ws = new WrapperString(s);
         int id = Base64Codec.DecodeFromString(ws);
+
         if(Global.instance.connect(id, ctx) == -1) {
             System.out.print("this id already of server id : " + id);
             ctx.writeAndFlush("yuor id already of list");
@@ -120,5 +121,12 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             System.out.println("player connect accepted id : " + id);
             ctx.writeAndFlush("connect accepted");
         }
+    }
+
+    public void userNotDefined(ChannelHandlerContext ctx)
+    {
+        ctx.writeAndFlush("your id does not authentificated");
+        ctx.close();
+        System.out.println("user not defined");
     }
 }
