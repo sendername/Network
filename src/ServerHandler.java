@@ -81,13 +81,10 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         if(Global.instance.players.containsKey(ctx))
         {
             Global.instance.players.get(ctx).ready = true;
-            ctx.writeAndFlush("ready : on");
+            if(!Global.instance.hub.contains(Global.instance.players.get(ctx)))
+                Global.instance.hub.add(Global.instance.players.get(ctx));
 
-            //TRACE:
-           /* System.out.println("user with id : " +
-                    Global.instance.players.get(ctx).id +
-                    " selected - readyON");*/
-            //END_TRACE;
+            ctx.writeAndFlush("ready : on");
             return 0;
         }
         else return -1;
@@ -97,13 +94,10 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         if(Global.instance.players.containsKey(ctx))
         {
             Global.instance.players.get(ctx).ready = false;
-            ctx.writeAndFlush("ready : off");
+            if(Global.instance.hub.contains(Global.instance.players.get(ctx)))
+                Global.instance.hub.remove(Global.instance.players.get(ctx));
 
-            //TRACE:
-            /*System.out.println("user with id : " +
-                    Global.instance.players.get(ctx).id +
-                    " selected - readyOFF");*/
-            //END_TRACE;
+            ctx.writeAndFlush("ready : off");
             return 0;
         }
         else return -1;

@@ -25,16 +25,13 @@ public class Global {
 
     public int connect(int id, ChannelHandlerContext ctx)
     {
-        if(playersId.contains(id))
-            return -1;
-        else
-        {
-            Player p = new Player(id, ctx);
-            players.put(ctx, p);
-            playersId.add(p.id);
-            incToHub(p);
-            return 0;
-        }
+        if(playersId.contains(id)) return -1;
+        if(players.containsKey(ctx)) return -2;
+
+        Player p = new Player(id, ctx);
+        players.put(ctx, p);
+        playersId.add(p.id);
+        return 0;
     }
 
     public void disconnect(Player player)
@@ -45,11 +42,11 @@ public class Global {
         player.ctx.close();
     }
 
-    public int incToHub(Player player)
+    public int checkHub()
     {
-        hub.add(player);
         if(hub.size() == capacityHub) {
             for (Player p : hub) {
+                p.ready = false;
                 p.sendMessage("battle ground active + your id : " + p.id);
                 rooms.put(new Room(), p);
             }
