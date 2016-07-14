@@ -30,11 +30,7 @@ class ApplicationMain {
 		var types = [];
 		
 		
-		urls.push ("img/button.svg");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("img/button2.svg");
+		urls.push ("img/button3.svg");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -103,7 +99,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "183",
+			build: "253",
 			company: "",
 			file: "GameClient",
 			fps: 60,
@@ -115,7 +111,7 @@ class ApplicationMain {
 				
 				{
 					antialiasing: 0,
-					background: 12312046,
+					background: 12312063,
 					borderless: false,
 					depthBuffer: false,
 					display: 0,
@@ -145,7 +141,7 @@ class ApplicationMain {
 		
 		#if (js && html5)
 		#if (munit || utest)
-		openfl.Lib.embed (null, 1000, 600, "BBDDEE");
+		openfl.Lib.embed (null, 1000, 600, "BBDDFF");
 		#end
 		#else
 		create ();

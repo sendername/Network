@@ -1,4 +1,4 @@
-package;
+package util;
 import flash.display.*;
 import flash.events.*;
 import flash.net.*;
@@ -11,17 +11,15 @@ import Std;
  */
 class Connection
 {
-	var main:Sprite;
-	var socket:Socket;
+	public var socket:Socket;
 	var host:String;
 	var port:Int;
 	var connected:Bool;
 
-	public function new(host:String, port:Int, main:Sprite) 
+	public function new(host:String, port:Int) 
 	{
 		this.host = host;
 		this.port = port;
-		this.main = main;
 		connected = false;
 		socket = new Socket();
 		socket.addEventListener(SecurityErrorEvent.SECURITY_ERROR, this.onError);
@@ -52,26 +50,6 @@ class Connection
 	function onConnect(e:Event)
 	{
 		connected = true;
-		
-		var textfield:TextField = new TextField();
-		textfield.width = 960;
-		textfield.height = textfield.y = 100;
-		textfield.text = "кекеке";
-		textfield.textColor = 0x00FF00;
-		textfield.type = TextFieldType.INPUT;
-		
-		main.stage.addChild(textfield);
-		textfield.addEventListener(KeyboardEvent.KEY_DOWN, function(event:KeyboardEvent){
-			if (event.charCode == 13){
-				/*var i:Null<Int> = Std.parseInt(textfield.text);
-				trace(textfield.text);
-				if (i != null) {
-					send(Base64Codec.Encode(i));
-				}*/
-				send(textfield.text);
-				textfield.text = "";
-			}
-		});
 	}
 	
 	function onClose(e:Event)
@@ -87,19 +65,19 @@ class Connection
 		}
 	}
 	
-	function sendAuth(id:Int) {
+	public function sendAuth(id:Int) {
 		send("0" + Base64Codec.Encode(id));
 	}
 	
-	function sendPing() {
+	public function sendPing() {
 		send("1");
 	}
 	
-	function sendReady() {
+	public function sendReady() {
 		send("2");		
 	}
 	
-	function sendNotReady() {
+	public function sendNotReady() {
 		send("3");		
 	}
 	

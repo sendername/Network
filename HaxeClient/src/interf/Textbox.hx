@@ -15,12 +15,21 @@ class TextBox extends Sprite
 {
 	var tf:TextFormat;
 	var textfield:TextField;
+	public var text(get, set):String;
+	
+	function get_text() {
+		return textfield.text;
+	}
+	
+	function set_text(s) {
+		return textfield.text = s;
+	}
 
 	public function new(s:String) 
 	{
 		super();
 		
-		var svg:SVG = new SVG(Assets.getText("img/button2.svg"));
+		var svg:SVG = new SVG(Assets.getText("img/button3.svg"));
 		var shape:Shape = new Shape();
 		svg.render(shape.graphics);
 		addChild(shape);

@@ -1,8 +1,12 @@
 package src.interf;
 
+import flash.display.*;
 import flash.events.*;
-import flash.display.Stage;
+import flash.text.*;
+import openfl.*;
 import openfl.display.*;
+import openfl.text.*;
+import Main;
 
 /**
  * ...
@@ -11,6 +15,8 @@ import openfl.display.*;
 class Panel extends Sprite
 {
 	var st:Stage;
+	var input:TextBox;
+	var text:TextField;
 
 	public function new() 
 	{
@@ -19,18 +25,25 @@ class Panel extends Sprite
 		
 		var btn:Sprite;
 			
-		btn = new TextBox("TEST");
-		btn.x = 590;
-		btn.y = 200;
-		addChild(btn);
+		input = new TextBox("введите id");
+		input.x = 500;
+		input.y = 250;
+		addChild(input);
 		
-		btn = new Button("Вход", function(e:MouseEvent) {});
-		btn.x = 350;
-		btn.y = 200;
+		btn = new Button("Вход", function(e:MouseEvent) {
+			var i:Null<Int> = Std.parseInt(input.text);			
+			if (i != null) {
+				Main.connection.sendAuth(i);
+			}
+		});
+		btn.x = 200;
+		btn.y = 250;
 		addChild(btn);
-		btn = new Button("Играть", function(e:MouseEvent) {});
+		btn = new Button("Играть", function(e:MouseEvent) {
+			Main.connection.sendReady();			
+		});
 		btn.x = 350;
-		btn.y = 100;
+		btn.y = 150;
 		addChild(btn);
 		btn = new Button("Экран", function(e:MouseEvent) {
 			if (stage.displayState == StageDisplayState.FULL_SCREEN_INTERACTIVE)			
@@ -39,8 +52,24 @@ class Panel extends Sprite
 				stage.displayState = StageDisplayState.FULL_SCREEN_INTERACTIVE;				
 		});
 		btn.x = 350;
-		btn.y = 300;
+		btn.y = 350;
 		addChild(btn);
+		
+		text = new TextField();
+		var tf:TextFormat = new TextFormat(Assets.getFont("font/Jura-Medium.ttf").fontName, 72, 0x889999);
+		tf.align = TextFormatAlign.CENTER;
+		
+		text = new TextField();
+		text.width = 1000;
+		text.height = 100;
+		text.defaultTextFormat = tf;
+		text.selectable = false;
+		text.text = "Тест";
+		text.embedFonts = true;
+		text.y = 500;
+		text.autoSize = TextFieldAutoSize.CENTER;
+		
+		addChild(text);
 	}
 	
 	function Added(event:Event) {
