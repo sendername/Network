@@ -77,8 +77,11 @@ class Panel extends Sprite
 	}
 	
 	function Resize(event:Event) {
-		scaleX = stage.stageWidth / 1000;
-		scaleY = stage.stageHeight / 600;
+		var scX:Float = stage.stageWidth / 1000;
+		var scY:Float = stage.stageHeight / 600;
+		var scale:Float = scaleX = scaleY = Math.min(scX, scY);
+		x = stage.stageWidth / 2 - 500 * scale;
+		y = stage.stageHeight / 2 - 300 * scale;
 	}
 	
 }

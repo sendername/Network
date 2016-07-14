@@ -3,15 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a30406ae-41e3-4fe6-afc0-c5fe04018b17" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/bin/GameClient.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Global.class" afterPath="$PROJECT_DIR$/target/classes/Global.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ServerHandler.class" afterPath="$PROJECT_DIR$/target/classes/ServerHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/.build" afterPath="$PROJECT_DIR$/HaxeClient/bin/.build" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/HaxeClient/bin/flash/haxe/ApplicationMain.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/Main.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/Main.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HaxeClient/src/util/Connection.hx" afterPath="$PROJECT_DIR$/HaxeClient/src/util/Connection.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ServerHandler.java" afterPath="$PROJECT_DIR$/src/ServerHandler.java" />
     </list>
     <ignored path="Network.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +73,8 @@
       <file leaf-file-name="ServerHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5409091">
-              <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.8477273">
+              <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -108,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+              <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -360,7 +356,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Global.java</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ServerHandler.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
@@ -965,7 +960,7 @@
       <workItem from="1468386975847" duration="4897000" />
       <workItem from="1468395772068" duration="1404000" />
       <workItem from="1468426319783" duration="3422000" />
-      <workItem from="1468476858880" duration="6371000" />
+      <workItem from="1468476858880" duration="8031000" />
     </task>
     <task id="LOCAL-00001" summary="Renamed 2 classes">
       <created>1467800934323</created>
@@ -1075,11 +1070,17 @@
       <option name="project" value="LOCAL" />
       <updated>1468480940695</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="заменил в обработчике ошибок коннекта == -1 на &lt; 0">
+      <created>1468489960799</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1468489960799</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44359000" />
+    <option name="totallyTimeSpent" value="46019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1136,7 +1137,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="перерисовал SVG кнопок" />
     <MESSAGE value="Допилил декодер base64 на клиенте, привязал обработчтки к кнопкам" />
-    <option name="LAST_COMMIT_MESSAGE" value="Допилил декодер base64 на клиенте, привязал обработчтки к кнопкам" />
+    <MESSAGE value="заменил в обработчике ошибок коннекта == -1 на &lt; 0" />
+    <option name="LAST_COMMIT_MESSAGE" value="заменил в обработчике ошибок коннекта == -1 на &lt; 0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1482,7 +1484,7 @@
     <entry file="file://$PROJECT_DIR$/HaxeClient/src/interf/Panel.hx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="1" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1545,8 +1547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5409091">
-          <caret line="113" column="24" selection-start-line="113" selection-start-column="24" selection-end-line="113" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.8477273">
+          <caret line="116" column="24" selection-start-line="116" selection-start-column="24" selection-end-line="116" selection-end-column="24" />
           <folding />
         </state>
       </provider>
