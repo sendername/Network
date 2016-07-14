@@ -70,7 +70,8 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
             throws Exception {
         if (cause instanceof ReadTimeoutException) {
-
+            if(Global.instance.players.containsKey(ctx))
+                Global.instance.disconnect(Global.instance.players.get(ctx));
         } else {
 
         }
@@ -87,8 +88,9 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             ctx.writeAndFlush("ready : on");
             return 0;
         }
-        else return -1;
+        return -1;
     }
+
     public int setReadyOff(ChannelHandlerContext ctx)
     {
         if(Global.instance.players.containsKey(ctx))
@@ -100,7 +102,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             ctx.writeAndFlush("ready : off");
             return 0;
         }
-        else return -1;
+        return -1;
     }
 
     public void auth(ChannelHandlerContext ctx, String s)
@@ -111,7 +113,8 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         if(Global.instance.connect(id, ctx) < 0) {
             System.out.print("this id already of server id : " + id);
             ctx.writeAndFlush("your are already logged in");
-            ctx.close();
+            if(Global.instance.players.containsKey(ctx))
+                Global.instance.disconnect(Global.instance.players.get(ctx));
         }
         else {
             System.out.println("player connect accepted id : " + id);
