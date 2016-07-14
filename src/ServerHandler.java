@@ -81,6 +81,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         if(Global.instance.players.containsKey(ctx))
         {
             Global.instance.players.get(ctx).ready = true;
+            ctx.writeAndFlush("ready : on");
 
             //TRACE:
            /* System.out.println("user with id : " +
@@ -96,6 +97,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         if(Global.instance.players.containsKey(ctx))
         {
             Global.instance.players.get(ctx).ready = false;
+            ctx.writeAndFlush("ready : off");
 
             //TRACE:
             /*System.out.println("user with id : " +
