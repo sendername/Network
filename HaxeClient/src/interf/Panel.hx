@@ -64,7 +64,7 @@ class Panel extends Sprite
 		text.height = 100;
 		text.defaultTextFormat = tf;
 		text.selectable = false;
-		text.text = "Тест";
+		text.text = "";
 		text.embedFonts = true;
 		text.y = 500;
 		text.autoSize = TextFieldAutoSize.CENTER;

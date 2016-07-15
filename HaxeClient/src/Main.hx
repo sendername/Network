@@ -23,7 +23,7 @@ class Main extends Sprite
 			
 		var pan:Panel = new Panel();
 		addChild(pan);
-		pan.visible = false;
+		//pan.visible = false;
 		
 		connection = new Connection("localhost", 8080);
 		connection.socket.addEventListener(Event.CONNECT, function(e:Event) {
